@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a class="button" href="{% url sample:list %}">Back to list</a>
+    <h1>{{ object.title }}
+
+    <small style="float:right;">
+        <a class="button" href="{% url sample:update object.pk %}">update</a>
+        <a class="button" href="{% url sample:delete object.pk %}">delete</a>
+    </small>
+
+    </h1>
+    <p>
+        {{ object.text }}
+    </p>
+{% endblock %}

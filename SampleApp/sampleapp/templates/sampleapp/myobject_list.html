@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>
+    <a class="button" href="{% url sample:create %}">Create object</a>
+    </div>
+
+    <ul>
+    {% for object in object_list %}
+        <li>
+            <a class="title" href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+            &mdash;
+            <a class="action" href="{% url sample:delete object.pk %}">delete</a>
+            <a class="action" href="{% url sample:update object.pk %}">update</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

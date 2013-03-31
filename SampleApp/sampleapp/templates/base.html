@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head>
+    <title>{{ SITE_TITLE }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+</head><body>
+<div class="page">
+    <header>
+        <h1><a href="/">{{ SITE_TITLE }}</a></h1>
+    </header>
+    {% block content %}{% endblock %}
+</div>
+</body></html>
